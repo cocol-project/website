@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="397px" height="154px" viewBox="0 0 397 154" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Logo Header</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-316.000000, -56.000000)">
+            <g id="Name" transform="translate(495.000000, 46.000000)" fill="#000000" font-family="AmericanTypewriter-Bold, American Typewriter" font-size="60" font-weight="bold">
+                <g id="Name-Copy">
+                    <text id="the">
+                        <tspan x="0" y="57">the</tspan>
+                    </text>
+                    <text id="project">
+                        <tspan x="0" y="141">project</tspan>
+                    </text>
+                    <text id="Cocol">
+                        <tspan x="0" y="101">Cocol</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="Netflower" transform="translate(324.000000, 68.000000)">
+                <g id="Netflower-Copy">
+                    <polygon id="Rectangle" stroke="#141414" stroke-width="5" transform="translate(62.727912, 60.432043) rotate(-315.000000) translate(-62.727912, -60.432043) " points="40.0796216 37.7837521 85.3817586 37.7781968 85.3762034 83.0803338 40.0740663 83.0858891"></polygon>
+                    <circle id="Oval" stroke="#141414" stroke-width="5" fill="#FFFFFF" cx="41" cy="9" r="9"></circle>
+                    <circle id="Oval" stroke="#141414" stroke-width="5" fill="#FFFFFF" cx="85" cy="9" r="9"></circle>
+                    <circle id="Oval" stroke="#141414" stroke-width="5" fill="#FFFFFF" cx="9" cy="39" r="9"></circle>
+                    <circle id="Oval" stroke="#141414" stroke-width="5" fill="#FFFFFF" cx="9" cy="82" r="9"></circle>
+                    <circle id="Oval" stroke="#141414" stroke-width="5" fill="#FFFFFF" cx="85" cy="114" r="9"></circle>
+                    <circle id="Oval" stroke="#141414" stroke-width="5" fill="#FFFFFF" cx="41" cy="114" r="9"></circle>
+                    <circle id="Oval" stroke="#141414" stroke-width="5" fill="#FFFFFF" cx="115" cy="39" r="9"></circle>
+                    <circle id="Oval" stroke="#141414" stroke-width="5" fill="#FFFFFF" cx="115" cy="82" r="9"></circle>
+                    <g id="Splitter" transform="translate(41.000000, 9.000000)" stroke="#131313" stroke-linecap="square" stroke-width="5">
+                        <line x1="21.3689024" y1="20.8719512" x2="0.131097561" y2="0.12804878" id="Line-2"></line>
+                        <line x1="21.3689024" y1="20.8719512" x2="42.9057736" y2="0.12804878" id="Line-2"></line>
+                    </g>
+                    <g id="Splitter" transform="translate(62.500000, 103.500000) scale(-1, 1) rotate(-180.000000) translate(-62.500000, -103.500000) translate(41.000000, 93.000000)" stroke="#131313" stroke-linecap="square" stroke-width="5">
+                        <line x1="21.3689024" y1="20.8719512" x2="0.131097561" y2="0.12804878" id="Line-2"></line>
+                        <line x1="21.3689024" y1="20.8719512" x2="42.9057736" y2="0.12804878" id="Line-2"></line>
+                    </g>
+                    <g id="Splitter" transform="translate(19.500000, 60.500000) scale(-1, 1) rotate(-270.000000) translate(-19.500000, -60.500000) translate(-2.000000, 50.000000)" stroke="#131313" stroke-linecap="square" stroke-width="5">
+                        <line x1="21.3689024" y1="20.8719512" x2="0.131097561" y2="0.12804878" id="Line-2"></line>
+                        <line x1="21.3689024" y1="20.8719512" x2="42.9057736" y2="0.12804878" id="Line-2"></line>
+                    </g>
+                    <g id="Splitter" transform="translate(104.500000, 60.500000) scale(-1, 1) rotate(-90.000000) translate(-104.500000, -60.500000) translate(83.000000, 50.000000)" stroke="#131313" stroke-linecap="square" stroke-width="5">
+                        <line x1="21.3689024" y1="20.8719512" x2="0.131097561" y2="0.12804878" id="Line-2"></line>
+                        <line x1="21.3689024" y1="20.8719512" x2="42.9057736" y2="0.12804878" id="Line-2"></line>
+                    </g>
+                    <circle id="Oval" stroke="#141414" stroke-width="5" fill="#FFFFFF" cx="63" cy="30" r="9"></circle>
+                    <circle id="Oval" stroke="#141414" stroke-width="5" fill="#FFFFFF" cx="30" cy="60" r="9"></circle>
+                    <circle id="Oval" stroke="#141414" stroke-width="5" fill="#FFFFFF" cx="63" cy="93" r="9"></circle>
+                    <circle id="Oval" stroke="#141414" stroke-width="5" fill="#FFFFFF" cx="94" cy="60" r="9"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>the Cocol project</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8" content="" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<meta property="og:title" content="the Cocol project" />
+		<meta property="og:description" content="Real-world use-cases prototyping" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://cocol.io/" />
+		<meta property="og:updated_time" content="2020-04-15:11:56+01:00" />
+
+		<meta name="twitter:card" content="summary"/>
+		<meta name="twitter:title" content="the Cocol project"/>
+		<meta name="twitter:description" content="Real-world use-cases prototyping"/>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <link rel="stylesheet" href="https://andybrewer.github.io/mvp/mvp.css">
+        <script src="vivagraph.min.js"></script>
+        <style type="text/css" media="screen">
+         #graph {
+             height: 500px;
+             border: 3px solid yellow;
+             border-radius: 5px;
+             margin-bottom: 1rem;
+         }
+         #graph svg {
+             width: 100%;
+             height: 100%;
+         }
+         .graph-zoom {
+             display: inline-block;
+             font-weight: bold;
+             font-size: 20px;
+             border: 3px solid yellow;
+             border-radius: 3px;
+             width: 25px;
+             height: 25px;
+             text-align: center;
+             cursor: pointer;
+             user-select: none;
+         }
+        </style>
+	</head>
+
+	<body>
+            <header>
+                <img src="logo_header.svg" />
+                <h1>Blockchain has no real-world use-cases</h1>
+                <p><mark>Let's proof them wrong</mark></p>
+            </header>
+            <main>
+                <section>
+                    <div id="graph"></div>
+                    <div class="graph-zoom" onClick="zoomIn()">+</div>
+                    &nbsp;
+                    <div class="graph-zoom" onclick="zoomOut()">-</div>
+                    <script src="explorer.js"></script>
+                </section>
+                <hr>
+                <article>
+                    <section style="width:70%; margin: auto; text-align: justify">
+                        <h2>About</h2>
+                        <p>
+                            Cocol utilizes Crystal to enable rapid prototyping and to increase the accessibility for developers and welcome the Ruby community at once.
+                        </p>
+
+                        <p>
+                            Crystal – like Ruby – is a cut to the chase kinda language.
+                            Think streetfood, delicious and filling. (gluten/lactose/soy/sugar free options available)
+                            It has the potential to speak to everyone without judging.
+                        </p>
+
+                        <p>
+                            Cocol tries to be the same for Blockchain Technologies.
+                            We want to iterate rapidly and numerously, to fail often, stand up again and find the right solution.
+                        </p>
+                        <p>
+                            Cocol is in alpha and has a few modules like PoW and Probfin. Rudementary p2p gossip to get you going. So we rely on the
+                            community to develop more modules and get it to the next level.
+                        </p>
+                    </section>
+                    <hr>
+                    <section>
+                        <header>
+                            <h2><u>Go and break stuff</u></h2>
+                            <p><img height="30px" src="octocat.svg"></p>
+                        </header>
+                        <table>
+                            <tr>
+                                <td><a href="https://github.com/cocol-project/cocol">Cocol (main repo)</a></td>
+                                <td><a href="https://github.com/cocol-project/cocol/fork"><img src="fork.svg"></a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/cocol-project/ccl-pow">Proof of Work</a></td>
+                                <td><a href="https://github.com/cocol-project/ccl-pow/fork"><img src="fork.svg"></a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/cocol-project/probfin">Probabilistic Finality</a></td>
+                                <td><a href="https://github.com/cocol-project/probfin/fork"><img src="fork.svg"></a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/cocol-project/ccl-wallet">Cocol Wallet</a></td>
+                                <td><a href="https://github.com/cocol-project/ccl-wallet/fork"><img src="fork.svg"></a></td>
+                            </tr>
+                        </table>
+                    </section>
+                </article>
+                <hr>
+                <section>
+                    <header>
+                        <h2>Who is responsible for this madness?</h2>
+                    </header>
+                    <aside>
+                        <h3>Cristian Serb</h3>
+                        <p>
+                            <small>
+                                You need help with your prototype?<br/>
+                                Drop me a line: <a href="mailto:proto@cocol.io">proto@cocol.io</a>
+                            </small>
+                        </p>
+                    </aside>
+                </section>
+            </main>
+	</body>
+</html>
