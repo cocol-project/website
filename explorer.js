@@ -1,7 +1,12 @@
 var nodes = [
   {
     port: '3000',
-    peers: []
+    peers: [],
+    host: '159.89.16.12',
+    //host: 'localhost',
+    ident: 'master',
+    name: 'master',
+    master: true
   }
 ];
 
@@ -44,7 +49,7 @@ var loopNodes = function () {
 };
 
 var connectToNode = function (i) {
-  socket = new WebSocket('ws://localhost:'+nodes[i].port+'/events');
+  socket = new WebSocket('ws://'+nodes[i].host+':'+nodes[i].port+'/events');
   socket.addEventListener('message', function (event) {
     console.log('===== now event ======');
     var eventData = JSON.parse(event.data);
@@ -67,7 +72,7 @@ var processEvent = function (event, i) {
     // stats.$forceUpdate();
   } else if(event.event === 'onConnection') {
       console.log('> + new peer');
-      checkConnections([event.peer_port], event.node_port);
+      checkConnections([event.peer_ident], event.node_ident, event.node_is_master);
   } else if(event.event === 'onNewBlock') {
     console.log('> + new block');
     if (!blocks[event.height]) {
@@ -85,35 +90,40 @@ var processEvent = function (event, i) {
     nodes[i].port = event.port;
     nodes[i].txn = event.txn;
     nodes[i].miner = event.miner;
+    nodes[i].ident = event.ident;
+    nodes[i].host = event.host;
+    nodes[i].name = event.name;
+    nodes[i].master = event.master;
 
-    if (nodes[i].port !== '3000' && nodes[i].port !== 3000) {
-      graph.addNode(nodes[i].port, {
+    if (!nodes[i].master) {
+      graph.addNode(nodes[i].ident, {
         height: nodes[i].height,
         hash: nodes[i].hash || '-',
         txn: nodes[i].txn || 0,
-        miner: nodes[i].miner
+        miner: nodes[i].miner,
+        name: nodes[i].name
       });
     }
 
     if (event.event === 'onInitialUpdate') {
-      checkConnections(event.peers, nodes[i].port);
+      checkConnections(event.peers, nodes[i].ident, nodes[i].master);
     }
   }
 };
 
-var checkConnections = function (peers, parentApiPort) {
+var checkConnections = function (peers, parentApiIdent, parentIsMaster) {
   for (i=0; i < peers.length; ++i) {
     (function () {
-      var peer = nodes.find(node => node.port === peers[i]);
+      var peer = nodes.find(node => node.ident === peers[i].ident);
       if (!peer) {
-        nodes.push({port: peers[i]});
+        nodes.push({port: peers[i].port, host: peers[i].host, ident: peers[i].ident});
         // stats.nodes = nodes;
         connectToNode(nodes.length - 1);
       }
       // also create link
-      if (parentApiPort !== '3000' && parentApiPort !== 3000) {
-        if (graph.getLink(peers[i], parentApiPort) === null && graph.getLink(parentApiPort, peers[i]) === null) {
-          graph.addLink(peers[i], parentApiPort);
+      if (!parentIsMaster) {
+        if (graph.getLink(peers[i].ident, parentApiIdent) === null && graph.getLink(parentApiIdent, peers[i].ident) === null) {
+          graph.addLink(peers[i].ident, parentApiIdent);
         }
       }
     }());
@@ -146,8 +156,10 @@ graphics.node(function(node) {
   };
   var height = node.data ? node.data.height : '0';
   var hash = node.data ? node.data.hash : '-';
+  var display_id = (!!node.data && !!node.data.name && node.data.name !== 'Unknown') ? node.data.name : node.id
+  //var display_id = node.id;
 
-  var svgText = Viva.Graph.svg('text').attr('y', '-4px').text(node.id+' / '+height+' / '+hash.substr(-6));
+  var svgText = Viva.Graph.svg('text').attr('y', '-4px').text(display_id+' / '+height+' / '+hash.substr(-6));
   var svgCircle = Viva.Graph.svg('circle')
       .attr('r', '7px')
       .attr('cy', '12')
